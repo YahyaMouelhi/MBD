@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <title>YYEEY 19 !!!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="bd.ico" type="image/x-icon">
+</head>
+<body>
+
+    <img id="rib" src="ribbon.png" alt="">
+    <div class="msg">
+        <div class="hd">
+            <button id="audio" onclick="swap()"><i id="ai" class="bi bi-volume-mute"></i></button>
+            <h1>Dear Maram ...</h1>
+            <div class="end">
+                <img id="yah" src="oscp.png" alt="">
+                <p>Yours Yahya ...</p>
+            </div>
+        </div>
+        <p id="bdmp"></p>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#bdmp"  , {
+            strings: ["Wishing you the happiest birthday ever! I can't wait to see you achieve all your goals and not just school or bac but more , and live a life filled with happiness and adventure. Knowing someone as incredible as you has truly been a gift. I hope you realize just how awesome, smart, and cool you are. You are doing so well, and I have no doubt that nothing can ever stop you. So, never give up on your dreams and enjoy every moment of this special day. Here’s to celebrating not just today, but all the hardships you overcame and all the wonderful moments yet to come. Your future is bright, and I am so excited to see all the amazing things you will accomplish. Enjoy every bit of your journey and know that you have all the strength and brilliance to make your dreams come true.Love you and Happy birthday !! <br><br>"],
+            typeSpeed: 60
+        })
+    </script>
+    <script>
+
+        let song = new Audio("song.mp3");
+        function pl() {
+            song.play();
+        }
+
+        function pa() {
+            song.pause();
+        }
+
+        function swap(){
+            let volumeIcon = document.getElementById("ai");
+            if (volumeIcon.classList.contains("bi-volume-up-fill")) {
+                volumeIcon.classList.remove("bi-volume-up-fill");
+                volumeIcon.classList.add("bi-volume-mute");
+                pa();
+            } else {
+                volumeIcon.classList.remove("bi-volume-mute");
+                volumeIcon.classList.add("bi-volume-up-fill"); 
+                pl();
+            }
+        }
+
+    </script>
+</body>
+</html>
